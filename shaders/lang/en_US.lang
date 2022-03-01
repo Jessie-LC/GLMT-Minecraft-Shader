@@ -1,0 +1,10 @@
+option.POLARIZATION=Polarization
+    value.POLARIZATION.0=Unpolarized
+    value.POLARIZATION.1=Senkrecht
+    value.POLARIZATION.2=Parallel
+
+option.RADIUS_UM=Radius Micrometer
+
+option.MAX_MIE_RESOLUTION=Max Mie Quality
+
+option.BRIGHTNESS=Darkening
