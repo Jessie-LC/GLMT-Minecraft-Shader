@@ -106,12 +106,12 @@ float ComputeGeneralizedMieTheory(in float theta, in float lambda, in float radi
 
     float cosTheta = cos(theta);
 
-    complexFloat SSenkrecht;
-    complexFloat SParallel;
+    complexFloat SSenkrecht = complexFloat(0.0, 0.0);
+    complexFloat SParallel = complexFloat(0.0, 0.0);
     float sum = 0.0;
     for(int n = 1; n < M; ++n) {
-        float PiN = texelFetch(colortex5, ivec2(degrees(theta) - 0.5, n), 0).r;//ComputePi(cosTheta, n);
-        float TauN = texelFetch(colortex5, ivec2(degrees(theta) - 0.5, n), 0).g;//ComputeTau(cosTheta, n);
+        float PiN = texelFetch(colortex5, ivec2(degrees(theta) - 0.5, n), 0).r;
+        float TauN = texelFetch(colortex5, ivec2(degrees(theta) - 0.5, n), 0).g;
 
         float tmp = (2.0 * n + 1.0) / (n * (n + 1.0));
         SSenkrecht = complexAdd(

@@ -13,7 +13,7 @@ layout(location = 0) out vec4 color;
 uniform sampler2D colortex1;
 uniform sampler2D colortex4;
 
-uniform vec2 viewSize;
+uniform float viewHeight;
 
 uniform int frameCounter;
 
@@ -26,7 +26,7 @@ const bool colortex1Clear = false;
 
 /* DRAWBUFFERS:1 */
 void main() {
-	uint seed = uint(gl_FragCoord.x * viewSize.y + gl_FragCoord.y);
+	uint seed = uint(gl_FragCoord.x * viewHeight + gl_FragCoord.y);
 	     seed = seed * 720720u + uint(frameCounter);
 
     InitRand(seed);
